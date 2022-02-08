@@ -24,7 +24,7 @@ module.exports = (env, options) => {
                 ]
             }),
             new HtmlWebpackPlugin({
-                title: 'Aura2D Game'
+                title: 'Aura3D Game'
             })
         ],
         resolve: {
