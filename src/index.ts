@@ -1,15 +1,15 @@
-import { Core, Shader, Vec2, Vec3 } from 'aura';
+import { Game, ShaderPrograms, Vec2, Vec3 } from 'aura-3d';
 import { MAIN_STATE } from './state/main.state';
 
-const game = new Core.ThreeD.Game3D({
+const game = new Game({
     canvasDimensions: new Vec2(1024, 768),
     world: {
         dimensions: new Vec3(1024 * 100, 768 * 100, 1000000)
     }
 });
 
-game.registerShader(Shader.Program.ThreeD.PROGRAM_BASIC_3D);
-game.registerShader(Shader.Program.ThreeD.PROGRAM_COLOR_PER_VERTEX_3D);
+game.registerShader(ShaderPrograms.BASIC);
+game.registerShader(ShaderPrograms.COLOR_PER_VERTEX);
 
 game.addState(MAIN_STATE);
 
